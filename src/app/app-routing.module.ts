@@ -5,6 +5,8 @@ import { PageNotFoundComponent } from './error-routing/not-found/not-found.compo
 import { HomeComponent } from './home/home.component';
 import { ComponentsComponent } from './components/components.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { LoginComponent } from './login';
+import { AuthGuard } from './_helpers';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
