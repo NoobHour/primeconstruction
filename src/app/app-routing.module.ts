@@ -9,6 +9,11 @@ import { LoginComponent } from './login';
 import { AuthGuard } from './_helpers';
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'login', component: LoginComponent },
+
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent, data: { text: 'Home', icon: 'home' } },
   { path: 'components', component: ComponentsComponent, data: { text: 'Components', icon: 'web' } },
